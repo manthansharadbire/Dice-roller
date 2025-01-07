@@ -13,6 +13,11 @@
 <button id="roll-dice" onclick="rolldice()"><b>Roll Dice</b></button>
 </div>
 <script>
+
+function resetdice(){
+    const diceImg = document.getElementById('dice');
+    diceImg.src ='./images/dice.png'
+}
 function rolldice(){
 const min = 1
 const max = 6
@@ -21,26 +26,28 @@ const randomNumber = Math.round (Math.random() * (max-min)) + min;
 const diceImg = document.getElementById('dice');
 
 if(randomNumber==1){
-diceImg.src = './images/one.png'
-}
-else if(randomNumber==2){
-diceImg.src = './images/two.png'
-}
-else if(randomNumber==3){
-diceImg.src = './images/three.png'
-}
-else if(randomNumber==4){
-diceImg.src = './images/four.png'
-}
-else if(randomNumber==5){
-diceImg.src = './images/five.png'
+    diceImg.src = './images/one.png'
+    }
+    else if(randomNumber==2){
+    diceImg.src = './images/two.png'
+    }
+    else if(randomNumber==3){
+    diceImg.src = './images/three.png'
+    }
+    else if(randomNumber==4){
+    diceImg.src = './images/four.png'
+    }
+    else if(randomNumber==5){
+    diceImg.src = './images/five.png'
+    }
+    
+    else if(randomNumber==6){
+    diceImg.src = './images/six.png'
+    }
+    setTimeout(resetdice, 4000);
 }
 
-else if(randomNumber==6){
-diceImg.src = './images/six.png'
-}
-}
-
+setTimeout()
 
 </script>
 </body>
